@@ -29,7 +29,7 @@ app.get('/habilidades', (req, res) => {
     const query = 'SELECT * FROM habilidades';
     db.query(query, (err, result) => {
       if (err) {
-        res.status(500).send('Erro ao buscar habilidade');
+        res.status(500).send('Erro ao buscar habilidades');
       } else {
         res.status(200).json(result);
       }

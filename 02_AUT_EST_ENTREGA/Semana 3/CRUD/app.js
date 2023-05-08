@@ -9,13 +9,13 @@ var db = new sqlite3.Database(DBPATH);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true})); 
 
-app.get("/", function(req,res)  
+app.get("/", function(req,res) // leitura dos dados do banco
 {
     res.header("Access-Control-Allow-Origin", "*") 
     res.send("Botão que mostra um mapa de trilho e tudo mais");
 });
 
-app.get("/tudo", function(req,res){
+app.get("/tudo", function(req,res){ // leitura dos dados do banco;
     res.header("Access-Control-Allow-Origin", "*");
     db.all(`SELECT * FROM HABILIDADES`, [], (err, rows)=> 
  
@@ -26,4 +26,9 @@ app.get("/tudo", function(req,res){
         }
             res.send(rows);
     });
+});
+
+app.listen(port, () =>
+{
+  console.log(`Servidor rodando na porte ${port}`);
 });

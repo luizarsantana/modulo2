@@ -28,6 +28,45 @@ app.get("/tudo", function(req,res){ // leitura dos dados do banco;
     });
 });
 
+app.post("/criarHabilidade", function(req,res){ // adição de dados ao banco;
+  res.header("Acess-Control-Allow-Origin", "*");
+  db.all(`INSERT INTO habilidades`, [], (err, rows)=>
+
+    {
+        if (err)
+        {
+            res.send(err);
+        }
+            res.send(rows);
+    });
+});
+
+app.put("/atualizaHabilidade", function(req,res){ // atualização de dados do banco , app.post ou app.put;
+  res.header("Acess-Control-Allow-Origin", "*");
+  db.all( `UPDATE habilidades SET WHERE`, [], (err, rows)=> 
+ 
+    {
+        if (err)
+        {
+            res.send(err);
+        }
+            res.send(rows);
+    });
+});
+
+app.post("/deletarHabilidade", function(req,res){ // deletação de dados ao banco;
+  res.header("Acess-Control-Allow-Origin", "*");
+  db.all(`DELETE FROM habilidades WHERE`, [], (err, rows)=> 
+ 
+    {
+        if (err)
+        {
+            res.send(err);
+        }
+            res.send(rows);
+    });
+});
+
 app.listen(port, () =>
 {
   console.log(`Servidor rodando na porte ${port}`);

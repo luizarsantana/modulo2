@@ -1,0 +1,13 @@
+form{
+    margin-top: 250px;
+    margin-bottom: 250px;
+    margin-left: 550px;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #8d099f;
+    border-radius: 10px;
+}
+
+.button{
+    padding-top: 30px; 
+}

@@ -1,0 +1,21 @@
+body{
+    background-color: #a386c5;
+}
+
+section{
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+section aside{
+    margin:auto;
+    width: 900px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-size: larger;
+}

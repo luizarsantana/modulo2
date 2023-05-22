@@ -84,7 +84,7 @@ app.put("/atualizaUsuarios", function(req,res){
   });
 });
 
-app.post("/deletarUsuarios", function(req,res){ 
+app.delete("/deletarUsuarios", function(req,res){ 
   res.header("Acess-Control-Allow-Origin", "*");
   var id_pessoa = req.body.id_pessoa;
   var nome = req.body.nome;
@@ -165,7 +165,7 @@ app.put("/atualizaHabilidade", function(req,res){ // atualização de dados do b
   });
 });
 
-app.post("/deletarHabilidade", function(req,res){ // deletação de dados ao banco;
+app.delete("/deletarHabilidade", function(req,res){ // deletação de dados ao banco;
   res.header("Acess-Control-Allow-Origin", "*");
   var id_pessoa = req.body.id_pessoa;
   var habilidade = req.body.habilidade;
@@ -244,7 +244,7 @@ app.put("/atualizaFormacao", function(req,res){
   });
 });
 
-app.post("/deletarFormacao", function(req,res){ 
+app.delete("/deletarFormacao", function(req,res){ 
   res.header("Acess-Control-Allow-Origin", "*");
   var id_instituicao = req.body.id_instituicao;
   var instituicao = req.body.instituicao;
@@ -325,7 +325,7 @@ app.put("/atualizaExperiencia", function(req,res){
   });
 });
 
-app.post("/deletarExperiencia", function(req,res){ 
+app.delete("/deletarExperiencia", function(req,res){ 
   res.header("Acess-Control-Allow-Origin", "*");
   var id_pessoa = req.body.id_pessoa;
   var nome = req.body.nome;
@@ -405,7 +405,7 @@ app.put("/atualizaCertificados", function(req,res){
   });
 });
 
-app.post("/deletarCetificados", function(req,res){ 
+app.delete("/deletarCetificados", function(req,res){ 
   res.header("Acess-Control-Allow-Origin", "*");
   var id_instituicao = req.body.id_instituicao;
   var id_pessoa = req.body.id_pessoa;
